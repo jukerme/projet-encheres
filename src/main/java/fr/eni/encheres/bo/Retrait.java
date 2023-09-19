@@ -1,15 +1,12 @@
 package fr.eni.encheres.bo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Retrait {
 
 	private String rue;
 	private String codePostal;
 	private String ville;
 	
-	private List<ArticleVendu> lieuRetrait = new ArrayList<ArticleVendu>();
+	private ArticleVendu articleVendu;
 	
 	
 	
@@ -21,11 +18,11 @@ public class Retrait {
 	
 	
 	
-	public List<ArticleVendu> getLieuRetrait() {
-		return lieuRetrait;
+	public ArticleVendu getLieuRetrait() {
+		return articleVendu;
 	}
-	public void setLieuRetrait(List<ArticleVendu> lieuRetrait) {
-		this.lieuRetrait = lieuRetrait;
+	public void setLieuRetrait(ArticleVendu articleVendu) {
+		this.articleVendu = articleVendu;
 	}
 
 	public String getRue() {
@@ -53,8 +50,8 @@ public class Retrait {
 
 	@Override
 	public String toString() {
-		return "Retrait [rue=" + rue + ", codePostal=" + codePostal + ", ville=" + ville + ", lieuRetrait="
-				+ lieuRetrait + "]";
+		return "Retrait [rue=" + rue + ", codePostal=" + codePostal + ", ville=" + ville + ", articleVendu="
+				+ articleVendu + "]";
 	}
 
 }
