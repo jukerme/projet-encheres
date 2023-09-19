@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
-  <servlet>
-    <description></description>
-    <display-name>ConnexionServlet</display-name>
-    <servlet-name>ConnexionServlet</servlet-name>
-    <servlet-class>fr.eni.encheres.ihm.ConnexionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ConnexionServlet</servlet-name>
-    <url-pattern>/ConnexionServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>DeconnexionServlet</display-name>
-    <servlet-name>DeconnexionServlet</servlet-name>
-    <servlet-class>fr.eni.encheres.ihm.DeconnexionServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DeconnexionServlet</servlet-name>
-    <url-pattern>/DeconnexionServlet</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	version="5.0">
+
 </web-app>

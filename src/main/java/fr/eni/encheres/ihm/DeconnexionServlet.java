@@ -9,9 +9,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-/**
- * Servlet implementation class DeconnexionServlet
- */
+@WebServlet("/deconnexion")
 public class DeconnexionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
