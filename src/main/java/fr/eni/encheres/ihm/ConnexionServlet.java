@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+import fr.eni.encheres.bll.UtilisateursManager;
 import fr.eni.encheres.bo.Utilisateur;
-
 
 @WebServlet("/connexion")
 public class ConnexionServlet extends HttpServlet {
@@ -27,21 +27,21 @@ public class ConnexionServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-//		String username = request.getParameter("username");
-//		String password = request.getParameter("password");
-//		
-//		Utilisateur user = UserManager.getInstance().login(username, password);
-//		
-//		if(user == null) {
-//			request.setAttribute("error", "Username ou le mot de passe est éronné");
-//			doGet(request, response);
-//		}else {
-//			HttpSession session = request.getSession();
-//			user.setPassword("");
-//			session.setAttribute("user", user);
-//			response.sendRedirect(request.getContextPath()+"/jeux/ajouter");
-//		}
-		
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+
+		Utilisateur user = UtilisateursManager.getInstance().login(email, password);
+
+		if (user == null) {
+			request.setAttribute("error", "Username ou le mot de passe est éronné");
+			doGet(request, response);
+		} else {
+			HttpSession session = request.getSession();
+			user.setMotDePasse("");
+			session.setAttribute("user", user);
+			response.sendRedirect(request.getContextPath() + "/jeux/ajouter");
+		}
+
 	}
 
 }
